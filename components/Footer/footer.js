@@ -14,6 +14,6 @@ color:white;
 export default function Footer() {
     return (<StyledFooter>
         <h3>Safe Travels</h3>
-        mymap.com
+        Made by Mai Anh Nguyen
     </StyledFooter>)
 }
