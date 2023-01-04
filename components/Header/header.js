@@ -15,7 +15,7 @@ position: sticky;
 export default function Header() {
     return (
         <TopHeader>
-            <h1>Vancouver Downtown Expo Line</h1>
+            <h1>Vancouver Expo Line</h1>
         </TopHeader>
     )
 
