@@ -31,7 +31,7 @@ export default function Map() {
     const red = { color: 'red' };
     const blue = { color: '#2853d7' };
 
-    const data = [
+    const stations = [
         {
             name: 'WaterFront',
             position: [49.28524524981317, -123.11434751643503],
@@ -216,7 +216,7 @@ export default function Map() {
                 attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {data.map((o, i) =>
+            {stations.map((o, i) =>
                 <Marker position={o.position} key={i}>
                     <Popup>
                         <StyledImg>
@@ -228,7 +228,7 @@ export default function Map() {
             )};
 
             <CircleMarker pathOptions={red} center={secondpolyline[4]} radius={20}>
-                {data.map((o, i) => <Popup key={i}>
+                {stations.map((o, i) => <Popup key={i}>
                     <StyledImg>
                         <img style={{ width: 50, height: 50 }} src='https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/160/apple/118/clapping-hands-sign_1f44f.png' />
                     </StyledImg>{o.destination}</Popup>)}
