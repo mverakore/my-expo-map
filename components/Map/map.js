@@ -5,13 +5,6 @@ import { MapContainer, TileLayer, Popup, Marker, Polyline, useMap, CircleMarker 
 import style from '../../styles/Home.module.css'
 import styled from 'styled-components'
 
-// const StyledPopup = styled(Popup)`
-//   .leaflet-popup-content-wrapper, .leaflet-popup-tip {
-//     background: #3cd4b5;
-//     box-shadow: 0;
-//     border-radius: 10px;
-//   }
-// `
 
 const StyledImg = styled.div`
 width: 100%;
@@ -22,8 +15,6 @@ justify-content: center;
 padding: 10px;
 `
 
-const styledMarker = styled(Marker)`
-`
 export default function Map() {
     const position = [49.28594, -123.11129];
 
@@ -35,7 +26,6 @@ export default function Map() {
         {
             name: 'WaterFront',
             position: [49.28524524981317, -123.11434751643503],
-            startpoint: "You are here",
             destination: null
         },
         {
@@ -244,7 +234,6 @@ export default function Map() {
             </CircleMarker>
 
             <Polyline pathOptions={green} positions={polyline} />
-            {/* {data.map((o,i) => <Polyline pathOptions={green} positions={[o.position]} key={i}/>)} */}
             <Polyline pathOptions={blue} positions={secondpolyline} />
         </MapContainer>
     )
